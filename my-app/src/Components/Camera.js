@@ -2,7 +2,7 @@ import React, {Component,Fragment} from 'react';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import imagePlaceholder from '../Assets/image/imagePlaceholder.jpg'
+import imagePlaceholder from '../Assets/image/imagePlaceholder.svg'
 import Webcam from "react-webcam";
 
 
@@ -38,13 +38,13 @@ class Camera extends Component {
                                 ref={this.cameraRef}
                                 audio={false}
                                 screenshotFormat="image/jpeg"
-                                style={{width:"500px"}}
+                                className='w-100 '
 
                             />
                             <button onClick={this.onCapture} className="btn btn-primary">Capture</button>
                         </Col>
                         <Col className="p-2" md={6} sm={12} lg={6} >
-                            <img style={{width:"500px"}}  src={this.state.capturePhoto} />
+                            <img className='w-100 '  src={this.state.capturePhoto} />
                             <button className="btn btn-primary">Save</button>
                         </Col>
                     </Row>
