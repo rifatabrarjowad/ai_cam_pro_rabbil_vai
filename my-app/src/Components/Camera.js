@@ -27,6 +27,18 @@ class Camera extends Component {
     }
 
 
+    onSave=()=>{
+
+        let base64String= this.state.capturePhoto;
+
+        let a= document.createElement("a");
+        a.href=base64String;
+        a.download="webcame.png";
+        a.click()
+
+    }
+
+
 
     render() {
         return (
@@ -45,7 +57,7 @@ class Camera extends Component {
                         </Col>
                         <Col className="p-2" md={6} sm={12} lg={6} >
                             <img className='w-100 '  src={this.state.capturePhoto} />
-                            <button className="btn btn-primary">Save</button>
+                            <button onClick={this.onSave} className="btn btn-primary">Save</button>
                         </Col>
                     </Row>
                 </Container>
